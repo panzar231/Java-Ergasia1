@@ -121,7 +121,7 @@ public class AddAthleteFrame extends ChildWindow implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == button) {
 			athleteService.addAthlete(textField3.getText(), textField4.getText(), textField5.getText().charAt(0),
-					Integer.valueOf(textField6.getText()), Integer.valueOf(textField7.getText()),
+					textField6.getText(), textField7.getText(),
 					textField8.getText().equals("Y"), Integer.valueOf(textField9.getText()));
 
 		} else if (e.getSource() == returnButton) {

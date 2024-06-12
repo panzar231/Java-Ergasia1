@@ -13,7 +13,7 @@ public class AthleteService {
         this.athleteList = new ArrayList<>();
     }
 
-    public void addAthlete(String name, String surname, char gender, int dateOfBirth, int phoneNumber,
+    public void addAthlete(String name, String surname, char gender, String dateOfBirth, String phoneNumber,
             boolean proffesional, int skill) {
         Athlete athlete = new Athlete();
         athlete.setCode(nextCode());
