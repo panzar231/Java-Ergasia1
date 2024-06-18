@@ -5,8 +5,8 @@ public abstract class User {
     private String name;
     private String surname;
     private char gender;
-    private int dateOfBirth;
-    private int phoneNumber;
+    private String dateOfBirth;
+    private String phoneNumber;
 
     public int getCode() {
         return code;
@@ -40,19 +40,19 @@ public abstract class User {
         this.gender = gender;
     }
 
-    public int getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -1,41 +1,40 @@
 package model;
 
 public class TrainingProgramReservation {
-    private int personalCode2;
-    private String nameOfAthlete;
-    private String nameOfProgram;
-    private int dateOfProgram;
+    private String reservationcode;
+    private Athlete athlete;
+    private TrainingProgram trainingProgram;
+    private String dateOfReservation;
 
-    public int getPersonalCode2() {
-        return personalCode2;
+    public Athlete getAthlete() {
+        return athlete;
     }
 
-    public void setPersonalCode2(int personalCode2) {
-        this.personalCode2 = personalCode2;
+    public void setAthlete(Athlete athlete) {
+        this.athlete = athlete;
     }
 
-    public String getNameOfAthlete() {
-        return nameOfAthlete;
+    public TrainingProgram getTrainingProgram() {
+        return trainingProgram;
     }
 
-    public void setNameOfAthlete(String nameOfAthlete) {
-        this.nameOfAthlete = nameOfAthlete;
+    public void setTrainingProgram(TrainingProgram trainingProgram) {
+        this.trainingProgram = trainingProgram;
     }
 
-    public String getNameOfProgram() {
-        return nameOfProgram;
+    public String getReservationcode() {
+        return reservationcode;
     }
 
-    public void setNameOfProgram(String nameOfProgram) {
-        this.nameOfProgram = nameOfProgram;
+    public void setReservationcode(String reservationcode) {
+        this.reservationcode = reservationcode;
     }
 
-    public int getDateOfProgram() {
-        return dateOfProgram;
+    public String getDateOfReservation() {
+        return dateOfReservation;
     }
 
-    public void setDateOfProgram(int dateOfProgram) {
-        this.dateOfProgram = dateOfProgram;
+    public void setDateOfReservation(String dateOfReservation) {
+        this.dateOfReservation = dateOfReservation;
     }
-
 }
