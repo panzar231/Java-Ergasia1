@@ -1,5 +1,6 @@
 package ui;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -10,8 +11,6 @@ import services.AthleteService;
 import services.ReservationService;
 
 public class ReservationFrame extends ChildWindow implements ActionListener {
-
-    // private AddReservationFrame addReservationFrame;
 
     JButton newReservation, showReservationList, cancelReservation, returnButton;
     private AddReservationFrame addReservationFrame;
@@ -24,21 +23,21 @@ public class ReservationFrame extends ChildWindow implements ActionListener {
         newReservation = new JButton();
         newReservation.setBounds(30, 40, 230, 50);
         newReservation.setVisible(true);
-        newReservation.setText("Νέα κράτηση");
+        newReservation.setText("Νέα Κράτηση");
         newReservation.setFocusable(false);
         newReservation.addActionListener(this);
 
         showReservationList = new JButton();
         showReservationList.setBounds(30, 120, 230, 50);
         showReservationList.setVisible(true);
-        showReservationList.setText("Εμφάνιση λίστας κρατήσεων");
+        showReservationList.setText("Εμφάνηση Λίστας Κρατήσεων");
         showReservationList.setFocusable(false);
         showReservationList.addActionListener(this);
 
         cancelReservation = new JButton();
         cancelReservation.setBounds(30, 200, 230, 50);
         cancelReservation.setVisible(true);
-        cancelReservation.setText("Ακύρωση κράτησης");
+        cancelReservation.setText("Ακύρωση Κράτησης");
         cancelReservation.setFocusable(false);
         cancelReservation.addActionListener(this);
 
@@ -48,13 +47,25 @@ public class ReservationFrame extends ChildWindow implements ActionListener {
         returnButton.setText("Επιστροφή");
         returnButton.setFocusable(false);
         returnButton.addActionListener(this);
+
+        this.setTitle("Διαχείριση Αθλητών");
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setSize(300, 400);
+        this.setLayout(null);
+        this.setResizable(false);
+        this.getContentPane().setBackground(Color.LIGHT_GRAY);
+        this.setLocation(800, 325);
+        this.add(newReservation);
+        this.add(showReservationList);
+        this.add(cancelReservation);
+        this.add(returnButton);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == newReservation) {
             this.setVisible(false);
-            // addReservationFrame.setVisible(true);
+            addReservationFrame.setVisible(true);
         } else if (e.getSource() == showReservationList) {
 
         } else if (e.getSource() == cancelReservation) {

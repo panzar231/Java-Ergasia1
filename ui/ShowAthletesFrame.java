@@ -156,7 +156,8 @@ public class ShowAthletesFrame extends ChildWindow implements ActionListener { /
 																// που δεν υπαρχουν
 			athletes[i][0] = new JLabel(); // καθε αθλητης εχει σαν παραμετρο για τις γραμμες την μεταβλητη i καθως
 											// αναφερομαστε στον ιδιο αθλητη
-			athletes[i][0].setText(athleteService.getAthleteList().get(i).getName()); // το athleteService.getList()
+			athletes[i][0].setText(athleteService.getAthleteList().get(i).getName()); // το
+																						// athleteService.getAthleteList()
 																						// φερνει την λιστα ,στην
 																						// συνεχεια με το .get(i) περνει
 																						// το i ατομο της λιστας και
