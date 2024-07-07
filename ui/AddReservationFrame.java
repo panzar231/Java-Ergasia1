@@ -1,5 +1,8 @@
 package ui;
 
+import java.awt.Color;
+import java.awt.Font;
+
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
@@ -13,16 +16,19 @@ public class AddReservationFrame extends ChildWindow {
 
         super(parentWindow);
 
-        JFrame addReservationFrame = new JFrame("Add Reservation");
-        addReservationFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        addReservationFrame.setSize(600, 400);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(600, 400);
 
         JTextField dateTextField = new JTextField("DD");
-        dateTextField.setBounds(320, 300, 80, 40);
-        addReservationFrame.add(dateTextField);
+        dateTextField.setBounds(4, 3, 5, 4);
+        dateTextField.setFont(new Font("Poppins", Font.PLAIN, 35));
+        dateTextField.setBackground(Color.white);
+        dateTextField.setSelectedTextColor(Color.black);
 
+        this.setBackground(Color.LIGHT_GRAY);
         this.setLocation(800, 325);
         this.setResizable(false);
+        this.add(dateTextField);
     }
 
 }

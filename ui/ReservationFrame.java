@@ -48,7 +48,7 @@ public class ReservationFrame extends ChildWindow implements ActionListener {
         returnButton.setFocusable(false);
         returnButton.addActionListener(this);
 
-        this.setTitle("Διαχείριση Αθλητών");
+        this.setTitle("Διαχείριση Κρατήσεων");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(300, 400);
         this.setLayout(null);

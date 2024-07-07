@@ -17,14 +17,20 @@ public class ReservationService {
         this.reservationList = new ArrayList<>();
     }
 
-    public void reservation(Athlete athlete, TrainingProgram trainingProgram, String dateOfReservation) {
+    public void reservation(Athlete athlete, TrainingProgram trainingProgram, String dateOfReservation, String date,
+            String month, String year) {
 
         reservation = new TrainingProgramReservation();
 
         reservation.setAthlete(athlete);
         reservation.setTrainingProgram(trainingProgram);
         reservation.setDateOfReservation(dateOfReservation);
+        reservation.setDateOfReservation(year + '_' + month + date);
 
         reservationList.add(reservation);
+    }
+
+    public List<TrainingProgramReservation> showReservations() {
+
     }
 }
