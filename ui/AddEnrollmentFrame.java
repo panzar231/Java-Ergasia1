@@ -31,7 +31,7 @@ public class AddEnrollmentFrame extends ChildWindow implements ActionListener { 
 		this.enrollmentService = enrollmentService;
 
 		button = new JButton("Πληρωμή");
-		button.setBounds(700, 350, 200, 100);
+		button.setBounds(800, 400, 200, 50);
 		button.setFocusable(false);
 		button.addActionListener(this);
 		button.setVisible(false);
@@ -95,8 +95,8 @@ public class AddEnrollmentFrame extends ChildWindow implements ActionListener { 
 	public void actionPerformed(ActionEvent e) {
 		button.setVisible(false);
 		messageCongratsLabel.setVisible(false);
-		costLabel.setVisible(true);
-		button.setVisible(true);
+		costLabel.setVisible(false);
+		button.setVisible(false);
 		if (e.getSource() == returnButton) { // αν πατηθει το επιστροφη
 			// γυρναει στο προηγουμενο window
 			this.setVisible(false);
@@ -113,6 +113,8 @@ public class AddEnrollmentFrame extends ChildWindow implements ActionListener { 
 					return;
 				}
 				costLabel.setText("Κόστος: " + enrollment.getCost());
+				costLabel.setVisible(true);
+				button.setVisible(true);
 			} else {
 				wrongCode.setVisible(true);
 			}

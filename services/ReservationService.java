@@ -31,6 +31,6 @@ public class ReservationService {
     }
 
     public List<TrainingProgramReservation> showReservations() {
-
+        return reservationList;
     }
 }
