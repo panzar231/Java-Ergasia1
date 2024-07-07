@@ -1,12 +1,12 @@
 package ui;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import services.AthleteService;
 import services.ReservationService;
 
 public class ReservationFrame extends ChildWindow implements ActionListener {
@@ -19,7 +19,7 @@ public class ReservationFrame extends ChildWindow implements ActionListener {
     public ReservationFrame(JFrame parentWindow, ReservationService reservationService, AthleteService athleteService) {
         super(parentWindow);
 
-        this.addReservationFrame = new AddReservationFrame(this, reservationService);
+        this.addReservationFrame = new AddReservationFrame(this, reservationService, athleteService);
 
         newReservation = new JButton();
         newReservation.setBounds(30, 40, 230, 50);

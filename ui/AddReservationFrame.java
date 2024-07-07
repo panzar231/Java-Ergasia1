@@ -1,14 +1,21 @@
 package ui;
 
-import javax.swing.*;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.Box;
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import model.Athlete;
 import services.AthleteService;
 import services.ReservationService;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 @SuppressWarnings("unused")
 public class AddReservationFrame extends ChildWindow {
@@ -91,7 +98,7 @@ public class AddReservationFrame extends ChildWindow {
         panel.add(year_textfield, constraints);
 
         frame.add(panel);
-        frame.setVisible(true);
+        // frame.setVisible(true);
     }
 
 }

@@ -15,7 +15,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 
-import model.Athlete;
 import services.AthleteService;
 
 @SuppressWarnings("unused")
@@ -268,7 +267,7 @@ public class AddAthleteFrame extends ChildWindow implements ActionListener {
 		this.setResizable(false);
 		this.getContentPane().setBackground(Color.LIGHT_GRAY);
 		this.setLocation(325, 60);
-		this.setIconImage(icon.getImage());
+		// this.setIconImage(icon.getImage());
 		this.add(textField3);
 		this.add(textField4);
 		this.add(femaleRadioButton);
