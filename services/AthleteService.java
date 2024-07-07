@@ -8,7 +8,6 @@ import model.Athlete;
 public class AthleteService {
 
 	private List<Athlete> athleteList; // η λιστα με τους αθλητες
-	Athlete athlete; // ενα αντικειμενο athlete
 
 	public AthleteService() {
 		this.athleteList = new ArrayList<>(); // στο constructor θα δημιουργει την λιστα
@@ -25,7 +24,7 @@ public class AthleteService {
 																												// στην
 																												// λιστα
 			boolean proffesional, int skill) {
-		athlete = new Athlete();
+		Athlete athlete = new Athlete();
 		athlete.setCode(nextCode()); // ο κωδικος φτιαχνεται μονος του απο την αναλογη μεθοδο
 		athlete.setName(name);
 		athlete.setSurname(surname);
@@ -117,7 +116,7 @@ public class AthleteService {
 		return athleteList.size() + 1;
 	}
 
-	public int getCode() { // επιστρεφει το μεγεθος της λιστας
+	public int getAthleteListSize() { // επιστρεφει το μεγεθος της λιστας
 		return athleteList.size();
 	}
 

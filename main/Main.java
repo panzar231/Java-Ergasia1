@@ -1,3 +1,4 @@
+package main;
 
 import services.AthleteService;
 import services.ReservationService;

@@ -136,7 +136,7 @@ public class ShowAthletesFrame extends ChildWindow implements ActionListener { /
 		if (e.getSource() == showButton) { // αν πατηθει να εμφανισει τοτε καλει την initializeAthleteLabels οπου θέτει
 											// ολες τις πληροφοριες την λιστας των athlete στα αναλογα labels
 			initializeAthleteLabels();
-			if (athleteService.getCode() == 0) { // αν δεν εχει μπει ουτε ενα ατομο στην λιστα
+			if (athleteService.getAthleteListSize() == 0) { // αν δεν εχει μπει ουτε ενα ατομο στην λιστα
 				noAthleteLabel.setVisible(true);
 			} else {
 				athletesVisibility(true); // αν εχει αθλητες τους κανει ολους εμφανιση
@@ -151,9 +151,10 @@ public class ShowAthletesFrame extends ChildWindow implements ActionListener { /
 	}
 
 	private void initializeAthleteLabels() { // αυτο ειναι λιγο περιπλοκο οποτε λιγο μαζι μου (συγγωμη)
-		for (int i = 0; i < athleteService.getCode(); i++) { // αρχικα κανει ενα for με το μεγεθος της λιστας ωστε να
-																// μην προκυψει καποιο θεμα με την εκτυπωση μεταβλητων
-																// που δεν υπαρχουν
+		for (int i = 0; i < athleteService.getAthleteListSize(); i++) { // αρχικα κανει ενα for με το μεγεθος της λιστας
+																		// ωστε να
+			// μην προκυψει καποιο θεμα με την εκτυπωση μεταβλητων
+			// που δεν υπαρχουν
 			athletes[i][0] = new JLabel(); // καθε αθλητης εχει σαν παραμετρο για τις γραμμες την μεταβλητη i καθως
 											// αναφερομαστε στον ιδιο αθλητη
 			athletes[i][0].setText(athleteService.getAthleteList().get(i).getName()); // το
@@ -258,7 +259,7 @@ public class ShowAthletesFrame extends ChildWindow implements ActionListener { /
 	}
 
 	private void athletesVisibility(boolean x) { // τα κανει ορατα η αορατα
-		for (int i = 0; i < athleteService.getCode(); i++) {
+		for (int i = 0; i < athleteService.getAthleteListSize(); i++) {
 			for (int j = 0; j < 7; j++) {
 				athletes[i][j].setVisible(x);
 			}
