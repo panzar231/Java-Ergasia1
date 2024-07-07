@@ -10,20 +10,22 @@ import javax.swing.JFrame;
 
 import services.AthleteService;
 import services.ReservationService;
+import services.SubscriptionService;
 
 public class MainWindow extends JFrame implements ActionListener {
 
 	private AthleteFrame athleteFrame;
-	private BookingFrame bookingFrame;
+	private ReservationFrame bookingFrame;
 	private SubscriptionFrame subscriptionFrame;
 	private JButton athleteManagement, subscriptionManagement, bookingManagement, exitButton;
 	private ImageIcon image;
 
-	public MainWindow(AthleteService athleteService, ReservationService reservationService) {
+	public MainWindow(AthleteService athleteService, ReservationService reservationService,
+			SubscriptionService subscriptionService) {
 
 		this.athleteFrame = new AthleteFrame(this, athleteService);
-		this.bookingFrame = new BookingFrame(this, reservationService);
-		this.subscriptionFrame = new SubscriptionFrame(this);
+		this.bookingFrame = new ReservationFrame(this, reservationService, athleteService);
+		this.subscriptionFrame = new SubscriptionFrame(this, subscriptionService);
 
 		image = new ImageIcon("file.png");
 

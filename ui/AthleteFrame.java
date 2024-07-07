@@ -10,17 +10,15 @@ import javax.swing.JFrame;
 
 import services.AthleteService;
 
+@SuppressWarnings("unused")
 public class AthleteFrame extends ChildWindow implements ActionListener {
 
 	private AddAthleteFrame addAthleteFrame;
 	private JButton addAthlete, registrationPayment, showAthleteList, changeAthlete, returnButton;
-	private ImageIcon athleteImage;
 
 	public AthleteFrame(JFrame parentWindow, AthleteService athleteService) {
 		super(parentWindow);
 		this.addAthleteFrame = new AddAthleteFrame(this, athleteService);
-
-		athleteImage = new ImageIcon("125241.png");
 
 		addAthlete = new JButton();
 		addAthlete.setBounds(30, 40, 230, 50);
@@ -64,7 +62,6 @@ public class AthleteFrame extends ChildWindow implements ActionListener {
 		this.setResizable(false);
 		this.getContentPane().setBackground(Color.LIGHT_GRAY);
 		this.setLocation(800, 325);
-		this.setIconImage(athleteImage.getImage());
 		this.add(addAthlete);
 		this.add(registrationPayment);
 		this.add(showAthleteList);

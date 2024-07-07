@@ -113,8 +113,4 @@ public class AthleteService {
 	public List<Athlete> getAthleteList() {
 		return this.athleteList;
 	}
-
-	public int getSizeOfAthleteList() {
-		return athleteList.size();
-	}
 }

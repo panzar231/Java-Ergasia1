@@ -12,26 +12,19 @@ public class ReservationService {
     private List<TrainingProgramReservation> reservationList;
     TrainingProgramReservation reservation;
 
-    public ReservationService() {
+    public ReservationService(AthleteService athleteService) {
 
         this.reservationList = new ArrayList<>();
     }
 
-    public void reservation(Athlete athlete, TrainingProgram trainingProgram, String dateOfReservation,
-            int sizeOfAthleteList) {
+    public void reservation(Athlete athlete, TrainingProgram trainingProgram, String dateOfReservation) {
 
-        if (sizeOfAthleteList != 0) {
+        reservation = new TrainingProgramReservation();
 
-            reservation = new TrainingProgramReservation();
+        reservation.setAthlete(athlete);
+        reservation.setTrainingProgram(trainingProgram);
+        reservation.setDateOfReservation(dateOfReservation);
 
-            reservation.setAthlete(athlete);
-            reservation.setTrainingProgram(trainingProgram);
-            reservation.setDateOfReservation(dateOfReservation);
-
-            reservationList.add(reservation);
-        } else {
-            System.out.println("There are no athletes added.");
-        }
-
+        reservationList.add(reservation);
     }
 }

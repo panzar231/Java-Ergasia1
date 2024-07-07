@@ -18,6 +18,7 @@ import javax.swing.border.Border;
 import model.Athlete;
 import services.AthleteService;
 
+@SuppressWarnings("unused")
 public class AddAthleteFrame extends ChildWindow implements ActionListener {
 
 	private AthleteService athleteService;
@@ -58,8 +59,6 @@ public class AddAthleteFrame extends ChildWindow implements ActionListener {
 		super(parentWindow);
 
 		this.athleteService = athleteService;
-
-		icon = new ImageIcon("992651.png");
 
 		button = new JButton("Αποθήκευση");
 		button.setBounds(100, 350, 200, 100);

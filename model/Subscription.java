@@ -2,8 +2,8 @@ package model;
 
 public class Subscription implements PriceList {
     private int uniqueCode;
-    private String athleteName;
-    private String programName;
+    private Athlete athlete;
+    private TrainingProgram trainingProgram;
     private int monthlyCost;
 
     public double calculateTotalPrice() {
@@ -19,20 +19,20 @@ public class Subscription implements PriceList {
         this.uniqueCode = uniqueCode;
     }
 
-    public String getAthleteName() {
-        return athleteName;
+    public Athlete getAthlete() {
+        return athlete;
     }
 
-    public void setAthleteName(String athleteName) {
-        this.athleteName = athleteName;
+    public void setAthlete(Athlete athlete) {
+        this.athlete = athlete;
     }
 
-    public String getProgramName() {
-        return programName;
+    public TrainingProgram getProgram() {
+        return trainingProgram;
     }
 
-    public void setProgramName(String programName) {
-        this.programName = programName;
+    public void setTrainingProgram(TrainingProgram trainingProgram) {
+        this.trainingProgram = trainingProgram;
     }
 
     public int getMonthlyCost() {
