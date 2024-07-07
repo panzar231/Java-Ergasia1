@@ -11,6 +11,7 @@ public class AthleteService {
 
 	public AthleteService() {
 		this.athleteList = new ArrayList<>(); // στο constructor θα δημιουργει την λιστα
+		addAthlete("geo", "zar", 'M', "", "null", true, 2);
 	}
 
 	public void addAthlete(String name, String surname, char gender, String dateOfBirth, String phoneNumber, // αυτη η

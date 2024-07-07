@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import services.AthleteService;
+import services.EnrollmentService;
 import services.ReservationService;
 import services.SubscriptionService;
 
@@ -21,9 +22,9 @@ public class MainWindow extends JFrame implements ActionListener {
 	private ImageIcon image;
 
 	public MainWindow(AthleteService athleteService, ReservationService reservationService,
-			SubscriptionService subscriptionService) {
+			SubscriptionService subscriptionService, EnrollmentService enrollmentService) {
 
-		this.athleteFrame = new AthleteFrame(this, athleteService);
+		this.athleteFrame = new AthleteFrame(this, athleteService, enrollmentService);
 		this.bookingFrame = new ReservationFrame(this, reservationService, athleteService);
 		this.subscriptionFrame = new SubscriptionFrame(this, subscriptionService);
 

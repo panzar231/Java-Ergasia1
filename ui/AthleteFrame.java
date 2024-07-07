@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import services.AthleteService;
+import services.EnrollmentService;
 
 public class AthleteFrame extends ChildWindow implements ActionListener { // κανει extend το childwindow ωστε να μπορει
 																			// να επιστρεφει στο προηγουμενο παραθυρο
@@ -15,15 +16,17 @@ public class AthleteFrame extends ChildWindow implements ActionListener { // κ�
 	private AddAthleteFrame addAthleteFrame; // τα μετεπομενα παραθυρα που θα χρειαστουν
 	private ShowAthletesFrame showAthletesFrame;
 	private ChangeAthletesFrame changeAthletesFrame;
+	private AddEnrollmentFrame addEnrollmentFrame;
 	private JButton addAthlete, registrationPayment, showAthleteList, changeAthlete, returnButton; // τα αναλογα κουμπια
 
-	public AthleteFrame(JFrame parentWindow, AthleteService athleteService) { // το parent window το καλει ωστε να
-																				// μπορει να επιστρεψει πισω
+	// το parent window το καλει ωστε να μπορει να επιστρεψει πισω
+	public AthleteFrame(JFrame parentWindow, AthleteService athleteService, EnrollmentService enrollmentService) {
 		super(parentWindow); // το κληρωνομει
 		this.addAthleteFrame = new AddAthleteFrame(this, athleteService); // φτιαχνει τα αναλογα αντικειμενα των
 																			// υπολοιπων frames
 		this.showAthletesFrame = new ShowAthletesFrame(this, athleteService);
 		this.changeAthletesFrame = new ChangeAthletesFrame(this, athleteService);
+		this.addEnrollmentFrame = new AddEnrollmentFrame(this, enrollmentService);
 
 		addAthlete = new JButton(); // θετει τις πληροφοριες του αναλογου κουμπιου
 		addAthlete.setBounds(30, 40, 230, 50);
@@ -81,14 +84,14 @@ public class AthleteFrame extends ChildWindow implements ActionListener { // κ�
 			addAthleteFrame.setVisible(true);
 		} else if (e.getSource() == registrationPayment) { // αν πατηθει το αναλογο κουμπι να κανει ωρατη την πληρωμη
 															// εγραφης
-
+			this.setVisible(false);
+			addEnrollmentFrame.setVisible(true);
 		} else if (e.getSource() == showAthleteList) { // αν πατηθει το αναλογο κουμπι να κανει ωρατη εμφανιση αθλητη
 			this.setVisible(false);
 			showAthletesFrame.setVisible(true);
 		} else if (e.getSource() == changeAthlete) { // αν πατηθει το αναλογο κουμπι να κανει ωρατη την αλλαγη αθλητη
 			this.setVisible(false);
 			changeAthletesFrame.setVisible(true);
-
 		} else if (e.getSource() == returnButton) { // //αν πατηθει το αναλογο κουμπι να γυρισει στο parent window
 			this.setVisible(false);
 			parentWindow.setVisible(true);

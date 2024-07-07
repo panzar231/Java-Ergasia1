@@ -68,7 +68,7 @@ public class ChangeAthletesFrame extends ChildWindow implements ActionListener {
 		codeTextField1.setBackground(Color.white);
 		codeTextField1.setSelectedTextColor(Color.black);
 
-		submitButton1 = new JButton("Αποθήκευση");
+		submitButton1 = new JButton("Αναζήτηση");
 		submitButton1.setBounds(230, 10, 150, 50);
 		submitButton1.setFocusable(false);
 		submitButton1.addActionListener(this);

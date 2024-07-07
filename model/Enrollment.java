@@ -1,55 +1,65 @@
 package model;
 
+import java.util.Date;
+
 public class Enrollment implements PriceList {
-    private int uniqueCode2;
-    private String athleteName2;
-    private int dateOfEnrollment;
-    private int monthlyCost2;
-    private int saleOfAthlete;
+
+    private int code;
+    private int athleteCode;
+    private Date date;
+    private double cost;
+    private double ekptosi;
+
+    public Enrollment(int code, int athleteCode, double cost) {
+        this.code = code;
+        this.athleteCode = athleteCode;
+        this.date = new Date();
+        this.cost = cost;
+        this.ekptosi = 0.0;
+    }
 
     public double calculateTotalPrice() {
-
-        return 0;
+        return cost;
     }
 
-    public int getUniqueCode2() {
-        return uniqueCode2;
+    public int getCode() {
+        return code;
     }
 
-    public void setUniqueCode2(int uniqueCode2) {
-        this.uniqueCode2 = uniqueCode2;
+    public void setCode(int code) {
+        this.code = code;
     }
 
-    public String getAthleteName2() {
-        return athleteName2;
+    public int getAthleteCode() {
+        return athleteCode;
     }
 
-    public void setAthleteName2(String athleteName2) {
-        this.athleteName2 = athleteName2;
+    public void setAthleteCode(int athleteCode) {
+        this.athleteCode = athleteCode;
     }
 
-    public int getDateOfEnrollment() {
-        return dateOfEnrollment;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDateOfEnrollment(int dateOfEnrollment) {
-        this.dateOfEnrollment = dateOfEnrollment;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public int getMonthlyCost2() {
-        return monthlyCost2;
+    public double getCost() {
+        return cost;
     }
 
-    public void setMonthlyCost2(int monthlyCost2) {
-        this.monthlyCost2 = monthlyCost2;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
-    public int getSaleOfAthlete() {
-        return saleOfAthlete;
+    public double getEkptosi() {
+        return ekptosi;
     }
 
-    public void setSaleOfAthlete(int saleOfAthlete) {
-        this.saleOfAthlete = saleOfAthlete;
+    public void setEkptosi(double ekptosi) {
+        this.ekptosi = ekptosi;
     }
 
 }
